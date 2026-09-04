@@ -1,11 +1,12 @@
 {
   "expo": {
-    "name": "rn-envelope-send-interaction",
+    "name": "Postal / 01",
     "slug": "rn-envelope-send-interaction",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
+    "backgroundColor": "#F2EEE6",
     "ios": {
       "supportsTablet": true
     },
