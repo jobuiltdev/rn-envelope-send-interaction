@@ -30,7 +30,7 @@ npx expo-doctor
 4. A light haptic lands with the **SENT ✓** stamp.
 5. Flick the sealed envelope upward and right. Distance or velocity can satisfy the send threshold; an incomplete gesture springs back.
 6. A successful gesture accelerates off-screen and reveals **Delivered**.
-7. Tap **Replay** to reset every animated value and record another take.
+7. Tap **Done** to reset every animated value and prepare another take.
 
 The pre-flick choreography runs in roughly 3.3 seconds. The user controls the pause before the final send, making a natural 8–12 second recording easy.
 
@@ -58,7 +58,7 @@ The screen only permits `idle → folding → packing → ready → sending → 
 3. Start recording, tap **Send message**, then pause briefly when the stamp settles.
 4. Flick firmly toward the upper-right corner.
 5. Hold on **Delivered** for about one second, then stop the recording.
-6. Use **Replay** between takes; no reload is necessary.
+6. Use **Done** between takes; no reload is necessary.
 
 A clean take is usually 8–10 seconds. For the strongest visual result, record on a physical device so the haptics influence the performer's timing even though they are not captured in the video.
 

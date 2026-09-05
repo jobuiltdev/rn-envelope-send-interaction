@@ -77,10 +77,10 @@ export function SendLetterScreen() {
     }), [canFlick, completeSend, dragX, dragY, dragging]);
 
   const sourceStyle = useAnimatedStyle(() => ({
-    opacity: interpolate(insert.value, [0.45, 0.46], [1, 0]),
+    opacity: interpolate(insert.value, [0.5, 0.55], [1, 0]),
     transform: [
-      { translateY: interpolate(insert.value, [0, 0.46], [0, 40]) },
-      { scale: interpolate(insert.value, [0, 0.46], [1, 0.72]) },
+      { translateY: interpolate(insert.value, [0, 0.55], [0, 52]) },
+      { scale: interpolate(insert.value, [0, 0.55], [1, 0.7]) },
     ],
   }));
   const envelopeStyle = useAnimatedStyle(() => ({ opacity: envelopeIn.value, transform: [{ translateX: dragX.value + interpolate(sent.value, [0, 1], [0, width * 1.05]) }, { translateY: interpolate(envelopeIn.value, [0, 1], [360, 0]) + dragY.value + interpolate(sent.value, [0, 1], [0, -height * 0.85]) }, { rotate: `${interpolate(dragX.value, [-20, 180], [-2, 8]) + interpolate(sent.value, [0, 1], [0, 12])}deg` }, { scale: interpolate(sent.value, [0, 1], [1, 0.72]) }] }));
@@ -109,7 +109,7 @@ export function SendLetterScreen() {
       <View style={styles.controls}>
         {phase === 'idle' && <Pressable accessibilityRole="button" accessibilityLabel="Send message" onPress={begin} style={({ pressed }) => [styles.primaryButton, pressed && styles.pressed]}><Text style={styles.primaryText}>Send message</Text><Text style={styles.arrow}>↗</Text></Pressable>}
         {canFlick && <Text style={styles.gestureHint}>DRAG  ·  RELEASE</Text>}
-        {phase === 'delivered' && <Pressable accessibilityRole="button" accessibilityLabel="Replay interaction" onPress={reset} style={({ pressed }) => [styles.replayButton, pressed && styles.pressed]}><Text style={styles.replayText}>Replay</Text></Pressable>}
+        {phase === 'delivered' && <Pressable accessibilityRole="button" accessibilityLabel="Done, reset interaction" onPress={reset} style={({ pressed }) => [styles.replayButton, pressed && styles.pressed]}><Text style={styles.replayText}>Done</Text></Pressable>}
       </View>
     </View>
   );

@@ -9,8 +9,8 @@ export const ENVELOPE_HEIGHT = 218;
 
 export function Envelope({ foldProgress, insertProgress, sealProgress, stampProgress }: EnvelopeProps) {
   const letterStyle = useAnimatedStyle(() => ({
-    opacity: interpolate(insertProgress.value, [0.46, 0.47], [0, 1], Extrapolation.CLAMP),
-    transform: [{ translateX: -143 }, { translateY: interpolate(insertProgress.value, [0.46, 1], [0, 110], Extrapolation.CLAMP) }, { scale: interpolate(insertProgress.value, [0.46, 1], [0.72, 0.67], Extrapolation.CLAMP) }],
+    opacity: interpolate(insertProgress.value, [0.6, 0.61], [0, 1], Extrapolation.CLAMP),
+    transform: [{ translateX: -143 }, { translateY: interpolate(insertProgress.value, [0.61, 1], [16, 110], Extrapolation.CLAMP) }, { scale: interpolate(insertProgress.value, [0.61, 1], [0.7, 0.67], Extrapolation.CLAMP) }],
   }));
   const flapStyle = useAnimatedStyle(() => ({
     transform: [{ perspective: 800 }, { rotateX: `${interpolate(sealProgress.value, [0, 1], [178, 0], Extrapolation.CLAMP)}deg` }],
